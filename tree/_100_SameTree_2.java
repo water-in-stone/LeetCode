@@ -3,6 +3,7 @@ package leetcode.tree;
 /**
  * @author baikal on 2019-02-25
  * @project Algorithm
+ * 简洁的代码，本质上还是DFS，只是利用了 && 的特性
  */
 public class _100_SameTree_2 {
 

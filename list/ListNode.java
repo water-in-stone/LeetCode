@@ -12,4 +12,12 @@ public class ListNode {
         val = x;
     }
 
+    public void log() {
+        ListNode root = this;
+        while (root != null) {
+            System.out.println(root.val);
+            root = root.next;
+        }
+    }
+
 }

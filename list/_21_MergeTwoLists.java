@@ -42,15 +42,8 @@ public class _21_MergeTwoLists {
         b.next = new ListNode(3);
         b.next.next = new ListNode(2);
         ListNode res = mergeTwoLists(a, b);
-        log(res);
-
+        res.log();
     }
 
-    public static void log(ListNode root) {
-        while (root != null) {
-            System.out.println(root.val);
-            root = root.next;
-        }
-    }
 
 }
