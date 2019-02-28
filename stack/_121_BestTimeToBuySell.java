@@ -37,7 +37,7 @@ public class _121_BestTimeToBuySell {
     }
 
     public static void main(String[] args) {
-//        int[] example = {7, 1, 5, 3, 6, 4};
+    //    int[] example = {7, 1, 5, 3, 6, 4};
         int[] example = {7, 6, 4, 3, 1};
 
         System.out.println(maxProfit(example));

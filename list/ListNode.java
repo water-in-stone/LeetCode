@@ -19,5 +19,4 @@ public class ListNode {
             root = root.next;
         }
     }
-
 }
