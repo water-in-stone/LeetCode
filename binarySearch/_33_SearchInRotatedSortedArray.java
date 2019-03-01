@@ -1,4 +1,4 @@
-package leetcode.array;
+package leetcode.binarySearch;
 
 /**
  * @author baikal on 2019-02-27

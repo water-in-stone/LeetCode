@@ -1,6 +1,4 @@
-package leetcode.other;
-
-import java.util.*;
+package leetcode.binarySearch;
 
 /**
  * @author baikal on 2019-02-25
