@@ -20,20 +20,27 @@ public class QuickSort {
 
     public static int partition(int[] arr, int low, int high) {
         int pivot = arr[low];
+        // 保存一开始的pivot的索引
+        int i = low;
+
         while (low < high) {
             //从后往前比较
             while (pivot <= arr[high] && low < high) {
-                // 如果没有比关键值小的，比较下一个，直到有比关键值小的交换位置，然后又从前往后比较
+                // 如果没有比关键值小的，比较下一个，直到有比pivot小的
                 high--;
             }
-            swap(arr, high, low);
-            //从前往后比较
             while (arr[low] <= pivot && low < high) {
-                //如果没有比关键值大的，比较下一个，直到有比关键值大的交换位置
+                //如果没有比关键值大的，比较下一个，直到有比pivot大
                 low++;
             }
-            swap(arr, high, low);
+
+            if (low < high) {
+                swap(arr, high, low);
+            }
         }
+        // 最后将一开始的low处的值与两个哨兵的相遇处的值进行交换
+        swap(arr, i, high);
+
         // 返回pivot节点
         return low;
     }

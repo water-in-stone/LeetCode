@@ -1,6 +1,5 @@
 package leetcode.array;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 /**
@@ -13,32 +12,9 @@ public class _215_KthLargestElementInArray {
             throw new Error("error");
         }
         Arrays.sort(nums);
-        int kthValue = nums[0];
-        for (int i = nums.length - 1; i >=0 ; i--) {
+        int index = nums.length - k;
 
-        }
-        return 0;
-    }
-
-    public static ArrayList quickSort(int[] nums) {
-        if (nums.length == 0) return null;
-        int pivot = nums[0];
-        boolean isPivotFinded = false;
-        ArrayList<Integer> left = new ArrayList<>();
-        ArrayList<Integer> right = new ArrayList<>();
-
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] < pivot) {
-                left.add(nums[i]);
-            } else if (nums[i] == pivot && !isPivotFinded) {
-                isPivotFinded = true;
-                continue;
-            } else {
-                right.add(nums[i]);
-            }
-        }
-
-        return new ArrayList(Arrays.asList(left, pivot, right));
+        return nums[index];
     }
 
     public static void main(String[] args) {
