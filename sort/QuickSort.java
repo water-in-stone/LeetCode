@@ -1,8 +1,9 @@
-package leetcode.other;
+package leetcode.sort;
 
 /**
  * @author baikal on 2019-03-07
  * @project Algorithm
+ * 原地快速排序
  */
 public class QuickSort {
     public static void quickSortHelp(int[] arr) {
@@ -15,7 +16,6 @@ public class QuickSort {
             quickSort(arr, low, partition - 1);
             quickSort(arr, partition + 1, high);
         }
-
     }
 
     public static int partition(int[] arr, int low, int high) {
@@ -38,7 +38,7 @@ public class QuickSort {
                 swap(arr, high, low);
             }
         }
-        // 最后将一开始的low处的值与两个哨兵的相遇处的值进行交换
+        // 最后将一开始的low处的值与两个哨兵的相遇处的值进行交换，确保左侧的数均小于pivot，右侧的值均大于pivot
         swap(arr, i, high);
 
         // 返回pivot节点

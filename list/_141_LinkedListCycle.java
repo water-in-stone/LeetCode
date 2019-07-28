@@ -11,7 +11,7 @@ public class _141_LinkedListCycle {
         if (head == null || head.next == null) {
             return false;
         }
-
+        // 定义好快慢指针
         ListNode slow = head;
         ListNode fast = head.next;
         // 直接判断两个链表是否相等
