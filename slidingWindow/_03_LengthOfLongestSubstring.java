@@ -9,18 +9,20 @@ import java.util.*;
  */
 public class _03_LengthOfLongestSubstring {
     public static int lengthOfLongestSubstring(String s) {
-        int length = s.length();
-        int res = 0;
         HashMap<Character, Integer> hashMap = new HashMap<>();
-
-        for (int i = 0, j = 0; j < length; j++) {
-            if (hashMap.containsKey(s.charAt(j))) {
-                // 找出(i, j)窗口中的下限i
-                i = Math.max(i, hashMap.get(s.charAt(j)) + 1);
+        int res = 0;
+        int n = s.length();
+        // 窗口为 [i,j)
+        int i = 0;
+        for(int j = 0; j < n; j++ ){
+            char c = s.charAt(j);
+            if(hashMap.containsKey(c)){
+                // 找出下限i
+                i = Math.max(i, hashMap.get(c));
             }
             res = Math.max(res, j - i + 1);
-            // 将当前字符的位置存储起来，即(i,j)窗口中的上限j
-            hashMap.put(s.charAt(j), j);
+            // 因为是一个左闭右开的数组，所以每次存入的应该是 j + 1，即数组下一个index的值
+            hashMap.put(c, j + 1);
         }
         return res;
     }

@@ -9,15 +9,11 @@ public class ListNode {
     ListNode next;
     ListNode pre;
 
-    ListNode(int x) {
-        val = x;
+    ListNode(int val) {
+        this.val = val;
     }
+    
+    public void log(){
 
-    public void log() {
-        ListNode root = this;
-        while (root != null) {
-            System.out.println(root.val);
-            root = root.next;
-        }
     }
 }

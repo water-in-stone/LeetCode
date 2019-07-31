@@ -25,8 +25,8 @@ public class _101_SymmetricTree {
 
     public static void main(String[] args) {
         TreeNode a = new TreeNode(1);
-//        a.left = new TreeNode(3);
-        a.right = new TreeNode(3);
+        a.left = new TreeNode(2);
+        a.right = new TreeNode(2);
 //
 
         System.out.println(isSymmetric(a));

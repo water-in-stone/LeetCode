@@ -2,7 +2,8 @@ package leetcode.other;
 
 /**
  * @author baikal on 2019-02-12
- * @project Algorithm 边界条件，当left > right时，退出循环
+ * @project Algorithm 
+ * 边界条件，当left > right时，退出循环
  */
 public class BinarySearch {
   public static int search(int[] array, int key) {
