@@ -31,6 +31,7 @@ public class _19_RemoveNthNodeFromEnd_2 {
             fast = fast.next;
         }
 
+        // 考虑到 1→2, 2的情况
         if (prev == nthNode) {
             head = head.next;
         } else {

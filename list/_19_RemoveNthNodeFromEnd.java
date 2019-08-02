@@ -20,25 +20,28 @@ public class _19_RemoveNthNodeFromEnd {
         }
 
         ListNode fast = head;
-        ListNode slow = head;
-        ListNode res = new ListNode(0);
-        res.next = head;
+        ListNode nthNode = head;
+        ListNode prev = head;
 
         // 快指针先走
-        while (n >= 0) {
+        while (n > 0) {
             fast = fast.next;
             n--;
         }
 
         while (fast != null) {
-            slow = slow.next;
+            prev = nthNode;
+            nthNode = nthNode.next;
             fast = fast.next;
         }
 
-        // 此时的slow即为倒数的nth节点的上一个节点
-        slow.next = slow.next.next;
+        if (prev == nthNode) {
+            head = head.next;
+        } else {
+            prev.next = nthNode.next;
+        }
 
-        return res.next;
+        return head;
     }
 
     public static void main(String[] args) {
