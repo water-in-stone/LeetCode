@@ -3,6 +3,7 @@ package leetcode.dp;
 /**
  * @author baikal on 2019-02-28
  * @project Algorithm
+ * dp[i]表示在当前位置的房屋，可盗窃金额的最大值
  * 简单DP的题目，状态方程如下
  * dp[i] = max(dp[i - 2] + nums[i] , dp[i - 1])
  * 1. dp[i - 2] + nums[i] 代表偷取了当前房屋后的总钱数

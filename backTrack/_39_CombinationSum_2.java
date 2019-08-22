@@ -30,6 +30,7 @@ public class _39_CombinationSum_2 {
         } else {
             for (int i = begin; i < nums.length; i++) {
                 store.add(nums[i]);
+                // 每一次都需要添加当前这一轮的元素
                 backTrack(new ArrayList<>(store), nums, sum + nums[i], i, target);
                 store.remove(store.size() - 1);
             }

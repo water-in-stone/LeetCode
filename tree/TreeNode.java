@@ -15,6 +15,6 @@ public class TreeNode {
     }
 
     public void log() {
-        TreeNode root = this;
+        // TreeNode root = this;
     }
 }

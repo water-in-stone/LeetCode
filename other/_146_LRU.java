@@ -7,14 +7,14 @@ import java.util.*;
  * @project Algorithm 最近最少使用 1.使用双向链表来存储key和value 2.定义好remove
  *          2.每1次get的时候remove新的
  */
-class Node {
-  public int key, val;
-  public Node next, prev;
-  public Node(int k, int v) {
-      this.key = k;
-      this.val = v;
-  }
-}
+// class Node {
+//   public int key, val;
+//   public Node next, prev;
+//   public Node(int k, int v) {
+//       this.key = k;
+//       this.val = v;
+//   }
+// }
 
 class DoubleList {
   private Node head, tail; // 头尾虚节点
