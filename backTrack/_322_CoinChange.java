@@ -25,7 +25,7 @@ public class _322_CoinChange {
 
   public static int helper(int[] coins, int target) {
     if (memoStore[target] != -2) {
-      // 代表之前已经计算过
+      // 代表之前已经计算过，所以直接从缓存中读取
       return memoStore[target];
     } else if (target == 0) {
       // 代表当前硬币可以直接d达成目标
