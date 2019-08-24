@@ -16,6 +16,7 @@ public class _39_CombinationSum_2 {
         if (candidates == null || candidates.length == 0) {
             return null;
         }
+        // 先排序数组
         Arrays.sort(candidates);
         backTrack(new ArrayList<>(), candidates, 0, 0, target);
 
