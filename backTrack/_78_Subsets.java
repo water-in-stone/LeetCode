@@ -27,9 +27,8 @@ public class _78_Subsets {
         }
         for (int i = start; i < n; i++) {
             container.add(nums[i]);
-            List<Integer> newArr = new ArrayList<>(container);
             // 开始下一轮
-            backTrack(newArr, nums, i + 1, n);
+            backTrack(new ArrayList<>(container), nums, i + 1, n);
             container.remove(container.size() - 1);
         }
     }

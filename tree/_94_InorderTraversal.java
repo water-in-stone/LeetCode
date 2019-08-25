@@ -7,11 +7,12 @@ import java.util.*;
  * @project Algorithm
  * 基本思想：
  * 1. 递归版：使用DFS来遍历，且按照父节点在中间的方式去遍历左右节点
- * 2. 非递归版：使用栈来实现后入先出的效果，且模拟人的中序遍历情况
+ * 2. 非递归版：使用栈来实现后入先出的效果，且模拟中序遍历情况
  */
 public class _94_InorderTraversal {
     static List<Integer> res = new LinkedList<>();
 
+    // 递归版
     public static List<Integer> inorderTraversal(TreeNode root) {
         if (root == null) return new LinkedList<>();
 
@@ -23,7 +24,9 @@ public class _94_InorderTraversal {
         return res;
     }
 
-
+    /**
+     * 非递归版
+     */
     public static List<Integer> inorderTraversal2(TreeNode root) {
         if (root == null) return new LinkedList<>();
         LinkedList<TreeNode> stack = new LinkedList<>();

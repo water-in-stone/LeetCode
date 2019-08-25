@@ -3,6 +3,7 @@ package leetcode.dp;
 /**
  * @author baikal on 2019-07-23
  * @project Algorithm
+ * 只能买卖一次的情况
  */
 public class _121_BestTimeToBuy {
   public static int maxProfit(int[] prices) {

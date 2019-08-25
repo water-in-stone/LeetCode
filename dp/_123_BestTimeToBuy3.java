@@ -4,7 +4,7 @@ package leetcode.dp;
  * @author baikal on 2019-07-23
  * @project Algorithm
  */
-public class _121_BestTimeToBuy {
+public class _123_BestTimeToBuy3 {
   public static int maxProfit(int[] prices) {
     // 状态转移方程，https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/solution/yi-ge-fang-fa-tuan-mie-6-dao-gu-piao-wen-ti-by-lab/
     // 其中k表示迄今为止做的最大的交易次数, i表示当前第i天, 最后的0代表

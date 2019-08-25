@@ -2,6 +2,8 @@ package leetcode.backTrack;
 
 /**
  * @author baikal on 2019-03-16
+ * 使用dfs进行回溯，所以需要一个visited数组来标记节点是否被访问过
+ * 并进行状态重置
  * @project Algorithm
  */
 public class _79_WordSearch {
@@ -16,7 +18,7 @@ public class _79_WordSearch {
 
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[i].length; j++) {
-                if (backTrack(board, i, j, words, 0)) {
+                if (dfs(board, i, j, words, 0)) {
                     return true;
                 }
             }
@@ -25,7 +27,7 @@ public class _79_WordSearch {
         return false;
     }
 
-    public static boolean backTrack(char[][] board, int i, int j, char[] word, int length) {
+    public static boolean dfs(char[][] board, int i, int j, char[] word, int length) {
         if (length == word.length) {
             return true;
         }
@@ -36,13 +38,14 @@ public class _79_WordSearch {
         // 标记已经访问过此节点
         visited[i][j] = true;
 
-        if (backTrack(board, i - 1, j, word, length + 1) ||
-                backTrack(board, i + 1, j, word, length + 1) ||
-                backTrack(board, i, j - 1, word, length + 1) ||
-                backTrack(board, i, j + 1, word, length + 1)
+        if (dfs(board, i - 1, j, word, length + 1) ||
+                dfs(board, i + 1, j, word, length + 1) ||
+                dfs(board, i, j - 1, word, length + 1) ||
+                dfs(board, i, j + 1, word, length + 1)
         ) {
             return true;
         }
+        // 上下左右遍历后需要把当前节点的状态给还原
         visited[i][j] = false;
 
         return false;
