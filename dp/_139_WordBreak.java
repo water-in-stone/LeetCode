@@ -48,7 +48,7 @@ public class _139_WordBreak {
 
     public static void main(String[] args) {
         // String s = "abcba";
-        String s = "ccc";
+        // String s = "ccc";
 
         // System.out.println(wordBreak(s));
     }

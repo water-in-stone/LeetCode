@@ -25,6 +25,13 @@ public class _105_BuildTree {
         return res;
     }
 
+    /**
+     * 
+     * @param in_start 表示起始点
+     * @param in_end 表示结束点
+     * @param preorder 前序遍历结果
+     * @return
+     */
     public static TreeNode helper(int in_start, int in_end, int[] preorder) {
         // 当起点和终点值相同时，结束递归
         if (in_start == in_end) return null;
